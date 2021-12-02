@@ -1,0 +1,27 @@
+{
+  "name": "proyectos_node",
+  "version": "1.0.0",
+  "description": "Backend de la aplicacion parkiate ki",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "flutter",
+    "parking",
+    "nodejs"
+  ],
+  "author": "Jorge Perez",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pg-promise": "^10.11.1"
+  }
+}
