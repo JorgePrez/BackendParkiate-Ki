@@ -51,7 +51,7 @@ adminservicios(app);
 
 });
 
-/*
+
 app.get('/', (req,res) => {
     res.send('Ruta raiz del backend');
 } );
@@ -59,7 +59,7 @@ app.get('/', (req,res) => {
 app.get('/test', (req,res) => {
     res.send('Este es la ruta TEST');
 } );
-*/
+
 
 
 //ERROR HANBLDER
