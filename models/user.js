@@ -137,7 +137,58 @@ User.create = (user) => {
  }
 
 
+ //Guardar direcciones de usuarios
+
+
+
+ User.createdirection = (userdirection) => {
+
  
+    const sql =  `
+    INSERT INTO direcciones(
+        id_usuario,
+        nombre,
+        nombre_detallado,
+        latitude,
+        longitude 
+   )
+VALUES ($1,$2,$3,$4,$5) RETURNING id
+    `; 
+
+    //retornar 1 valor o ninguno
+    return db.oneOrNone(sql, [
+        userdirection.id_usuario ,
+        userdirection.nombre,
+        userdirection.nombre_detallado,
+        userdirection.latitude,
+        userdirection.longitude,
+
+
+     
+    ]);
+}
+
+
+//obteneniendo direcciones por usuario
+
+User.findDirectionesbyUser = (id_usuario) => {
+
+    const sql =  `
+    SELECT 
+    id_usuario,
+        nombre,
+        nombre_detallado,
+        latitude,
+        longitude
+FROM
+   direcciones
+WHERE 
+   id_usuario = $1    
+        `; 
+        return db.manyOrNone(sql,id_usuario);
+  
+
+}
 
 
 

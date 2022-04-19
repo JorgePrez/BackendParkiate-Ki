@@ -86,6 +86,31 @@ async update(req, res, next) {
 },
 
 
+async updateqr(req, res, next) {
+    try {
+
+        
+        const id_servicio= req.body;
+
+        await Adminservicio.updateqr(id_servicio);
+
+        return res.status(201).json({
+            success: true,
+            message: 'Los datos del servicio se actualizaron correctamente'
+        });
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            success: false,
+            message: 'Hubo un error con la actualizacion de datos del usuario',
+            error: error
+        });
+    }
+},
+
+
 async history(req, res, next) {
 
 
@@ -106,6 +131,101 @@ async history(req, res, next) {
     
 }
 
+},
+
+
+async historyadmin(req, res, next) {
+
+
+    try {
+        const id_parqueo= req.body.id_parqueo;
+        const data = await Adminservicio.findByPark(id_parqueo);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar el historial `,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
+async historyadminactual(req, res, next) {
+
+
+    try {
+        const id_parqueo= req.body.id_parqueo;
+        const data = await Adminservicio.findByParkActuales(id_parqueo);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar el historial `,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
+
+async findboolservice(req, res, next) {
+    try {
+       // const id = req.params.id;
+        const id_servicio= req.body.id_servicio;
+        const data = await Adminservicio.findService(id_servicio);    
+        console.log(`Cantidad de servicios: ${data}`);
+        //return res.status(201).json(data);
+        return res.status(201).json({
+            message: 'Datos de servicio obtenidos correctamente',
+            data: data ,
+            success: true,
+                                    
+    
+        });
+        
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            success: false,
+            message: 'Error al obtener cantidad de servicios'
+        });
+    }
+},
+
+
+async findboolservicefinish(req, res, next) {
+    try {
+       // const id = req.params.id;
+        const id_servicio= req.body.id_servicio;
+        const data = await Adminservicio.findServicefinish(id_servicio);    
+        console.log(`Cantidad de servicios: ${data}`);
+        //return res.status(201).json(data);
+        return res.status(201).json({
+            message: 'Datos de servicio obtenidos correctamente',
+            data: data ,
+            success: true,
+                                    
+    
+        });
+        
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            success: false,
+            message: 'Error al obtener cantidad de servicios'
+        });
+    }
 },
 
 

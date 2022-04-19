@@ -24,12 +24,21 @@ module.exports = (app) => {
     //vehiculo
 
 
-    //Registar servicios
+    //Crear direcciones
+    app.post('/api/users/createdirections',UsersController.createDirectios ); //perfil de usuario
+
+     //obtener direcciones por id de usuario
+
+     app.post('/api/users/getdirections',UsersController.directionsbyuser ); //perfil de usuario
+
+    
 
 
-    //TREAR Servicios por usuario (APP)
+    //Obtener # de servicios por ID
 
-    //TRAER SERVICIOS POR 
+    
+
+
 
 
 

@@ -204,6 +204,53 @@ async updateauto(req, res, next) {
     }
 },
 
+async createDirectios(req, res, next) {
+
+    try {
+        const userdirection = req.body; //capturando los datos de un usuario, lo qu el cluiente nos envia en parametros
+        const data = await User.createdirection(userdirection);
+    
+        return res.status(201).json({ 
+            success : true,
+            message: 'La direccion se registro correctamente',
+            data: data.id//en el modelo establecimos que una vez que se almacene que nos retorno el id (RETURNING ID)
+    
+        });
+        
+    } catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            success: false,
+            message: 'Hubo un error con el registro de la direccion',
+            error: error
+    
+        });
+    }
+    
+    },
+
+    async directionsbyuser(req, res, next) {
+        try {
+           // const id = req.params.id;
+            const id_usuario= req.body.id_usuario;
+            const data = await User.findDirectionesbyUser(id_usuario);    
+            console.log(`Usuario: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json(data);
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener direcciones de usuario'
+            });
+        }
+    },
+
+
+
+
 
 
 
