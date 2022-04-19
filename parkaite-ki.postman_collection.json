@@ -1,0 +1,1213 @@
+{
+	"info": {
+		"_postman_id": "340b52a5-51c6-4810-9ff7-122a5a016cfb",
+		"name": "parkaite-ki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.mapbox.com/geocoding/v5/mapbox.places/-73.989,40.733.json?access_token=pk.eyJ1Ijoiam9yZ2VwcmV6IiwiYSI6ImNrdmNwMGFkYzBwOTEydW55MDdrM3prbHkifQ.yXmk5FOgSeMGFALrPj3x2w&language=es",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.mapbox.com/geocoding/v5/mapbox.places/-73.989,40.733.json?access_token=pk.eyJ1Ijoiam9yZ2VwcmV6IiwiYSI6ImNrdmNwMGFkYzBwOTEydW55MDdrM3prbHkifQ.yXmk5FOgSeMGFALrPj3x2w&language=es",
+					"protocol": "https",
+					"host": [
+						"api",
+						"mapbox",
+						"com"
+					],
+					"path": [
+						"geocoding",
+						"v5",
+						"mapbox.places",
+						"-73.989,40.733.json"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "pk.eyJ1Ijoiam9yZ2VwcmV6IiwiYSI6ImNrdmNwMGFkYzBwOTEydW55MDdrM3prbHkifQ.yXmk5FOgSeMGFALrPj3x2w"
+						},
+						{
+							"key": "language",
+							"value": "es"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parkiateki.herokuapp.com/test",
+					"protocol": "https",
+					"host": [
+						"parkiateki",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/usuarios/create",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 21,\r\n    \"email\":  \"jorgi323d@gmail.com\",\r\n\t\"nombre\": \"jorge quelme\",\r\n\t\"telefono\": \"56784589d\",\r\n    \"imagen\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/usuarios/create Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 16,\r\n    \"modelo_auto\" : \"N/A\",\r\n    \"placa_auto\" : \"N/A\",\r\n    \"imagen_auto\" : \"https://res.cloudinary.com/parkiate-ki/image/upload/v1637573619/vehicle_rjori6.png\",\r\n     \"tipo_auto\":\"V\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/u",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"u"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/users/getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/getAll",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear servicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/getAll",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/users/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":  \"jensen@gmail.com\",\r\n    \"password\": \"579!!Oo296\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.cloudinary.com/v1_1/<cloud name>/<resource_type>/upload\n\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cloudinary",
+						"com"
+					],
+					"path": [
+						"v1_1",
+						"<cloud name>",
+						"<resource_type>",
+						"upload\n\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://res.cloudinary.com/parkiate-ki/image/upload/v1637568847/vsgyaxjd7z637aipaotp.png",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://res.cloudinary.com/parkiate-ki/image/upload/v1637568847/vsgyaxjd7z637aipaotp.png",
+					"protocol": "https",
+					"host": [
+						"res",
+						"cloudinary",
+						"com"
+					],
+					"path": [
+						"parkiate-ki",
+						"image",
+						"upload",
+						"v1637568847",
+						"vsgyaxjd7z637aipaotp.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.cloudinary.com/v1_1/parkiate-ki/image/upload?upload_preset=is-sales-preset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/opere/Downloads/306738582053211.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.cloudinary.com/v1_1/parkiate-ki/image/upload?upload_preset=is-sales-preset",
+					"protocol": "https",
+					"host": [
+						"api",
+						"cloudinary",
+						"com"
+					],
+					"path": [
+						"v1_1",
+						"parkiate-ki",
+						"image",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "upload_preset",
+							"value": "is-sales-preset"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/users/getById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\":\"16\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/users/getById",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/users/getById Copy 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_parqueo\":\"829258\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/resenias/getresenias",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"resenias",
+						"getresenias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/users/getById Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"id_parqueo\": \"A164F6\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://parkiateki.herokuapp.com/api/parqueos/slot",
+					"protocol": "https",
+					"host": [
+						"parkiateki",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"slot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.1.2:3000/api/users/getById Copy 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"akeyword\":\"%9a calle%\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/search",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicios crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"ABCA322\" ,\r\n     \"id_parqueo\": \"ADSFS\",\r\n     \"direccion\": \"DASDASDASDASDA\",\r\n     \"nombre_parqueo\": \"Dasdasdad\",\r\n     \"imagenes\": \"DdasDASDASDAd\", \r\n     \"id_usuario\": \"DASDASD\",\r\n     \"nombre_usuario\": \"DASDASDASDA\",\r\n     \"telefono\": \"dasdasdasd\",\r\n     \"modelo_auto\": \"SASDASDASD\",\r\n     \"placa_auto\": \"DADASD\",\r\n     \"fecha\": \"DASDas\",\r\n\t \"hora_deentrada\": \"DASDAS\",\r\n\t \"hora_desalida\": \"ADAS\",\r\n\t \"precio\": \"adasd\",\r\n\t \"parqueo_control_pagos\": \"dasd\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/create",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar servicios por id_parqueo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"6074G5\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.12:3000/api/adminservicios/historyadmin",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"historyadmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar servicios por id_parqueo Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"6074G5\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/historyadminactual",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"historyadminactual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicios crear preQR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id_servicio\": \"AyFy6ZEb\" ,\r\n     \"id_parqueo\": \"N/A\",\r\n     \"direccion\": \"N/A\",\r\n     \"nombre_parqueo\": \"N/A\",\r\n     \"imagenes\": \"N/A\", \r\n     \"id_usuario\": \"N/A\",\r\n     \"nombre_usuario\": \"N/A\",\r\n     \"telefono\": \"N/A\",\r\n     \"modelo_auto\": \"N/A\",\r\n     \"placa_auto\": \"N/A\",\r\n     \"fecha\": \"N/A\",\r\n\t \"hora_deentrada\": \"N/A\",\r\n\t \"hora_desalida\": \"N/A\",\r\n\t \"precio\": \"N/A\",\r\n\t \"parqueo_control_pagos\": \"N/A\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/create",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicios actualizar solo 2 campos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"AyFy6ZEb\" ,\r\n\t \"hora_desalida\": \"04:52\",\r\n\t \"precio\": \"300\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta por ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"XvUm78Fhdsdsdsd\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/getById",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"getById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de precios por parqueo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"6074G5\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/prize",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"prize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cantidad de servicios por ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"crKH0NMu\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/servicesboolean",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"servicesboolean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "servicios por ID #2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"AyFy6ZEb\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/servicesbooleanfinish",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"servicesbooleanfinish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Devuelve cantida de reviews por usuiario por parqueo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"779H91\" ,\r\n     \"nombre_usuario\": \"Jenson Button\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/reviews",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\"login\" de app admib",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"operezjorge@gmail.com\" ,\r\n     \"contrasenia\": \"579!!Oo296\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/login",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "preguntar si coindice el parqueo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_duenio\": \"66H410\" ,\r\n     \"id_parqueo\": \"829258\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/findparkamount",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"findparkamount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User by email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correoo\": \"operezjorge@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/dueniobyemail",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"dueniobyemail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User by ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correoo\": \"66H410\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.11:3000/api/parqueos/dueniobyid",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"11"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"dueniobyid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener direcciones por usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\": \"27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.11:3000/api/adminservicios/history",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"11"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener direcciones por usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\": \"27\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.11:3000/api/users/getdirections",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"11"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getdirections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finy park by id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"2C4B14\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/findpark",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"findpark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Devuelve la cantida de espacio disponibles de un parqueo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"779H91\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/parqueos/slot",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"slot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicios actualizar todo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"ABCA322\" ,\r\n     \"id_parqueo\": \"ACTALIZADO\",\r\n     \"direccion\": \"ACTUALIZADO\",\r\n     \"nombre_parqueo\": \"AC\",\r\n     \"imagenes\": \"AC\", \r\n     \"id_usuario\": \"AC\",\r\n     \"nombre_usuario\": \"AC\",\r\n     \"telefono\": \"AC\",\r\n     \"modelo_auto\": \"AC\",\r\n     \"placa_auto\": \"AC\",\r\n     \"fecha\": \"AC\",\r\n\t \"hora_deentrada\": \"AC\",\r\n\t \"hora_desalida\": \"AC\",\r\n\t \"precio\": \"AC\",\r\n\t \"parqueo_control_pagos\": \"AC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/updateqr",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"updateqr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear resenias",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nombre_usuario\": \"Uma thurman\" ,\r\n     \"imagen_usuario\": \"http\",\r\n     \"fecha\": \"01/15/2021\",\r\n     \"calificacion\": \"2.5\", \r\n\t \"comentario\": \"TODO CORRECTO PERRO \"\r\n}                                       \r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.17:3000/api/resenias/create",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"17"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"resenias",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear direcciones",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"nombre_usuario\": \"Uma thurman\" ,\r\n     \"id_usuario\":\"ABCAS1\",\r\n     \"nombre\":\"JUYIRA\",\r\n     \"nombre_detallado\":\"SUPER JUYIRA GUATEMALA\",\r\n     \"latitude\": \"90.2358\",\r\n      \"longitude\": \"11.2526\" \r\n}                                       \r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.11:3000/api/users/createdirections",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"11"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"createdirections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OBTENR TODOS LOS PARQUEOS DE REALTIME DATABASE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parkiate-ki-default-rtdb.firebaseio.com/parqueos.json",
+					"protocol": "https",
+					"host": [
+						"parkiate-ki-default-rtdb",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"parqueos.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener estado de 1 parqueo en realtime database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parkiate-ki-default-rtdb.firebaseio.com/Parking_Status/parqueo1.json",
+					"protocol": "https",
+					"host": [
+						"parkiate-ki-default-rtdb",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Parking_Status",
+						"parqueo1.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener estado de 1 parqueo con id de parqueo + id de espacio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://parkiate-ki-default-rtdb.firebaseio.com/Parking_Status/-Mq73KmXyn-fx7tlnIQn/-N-t_vx07IoxzsBpIURf/estado.json",
+					"protocol": "https",
+					"host": [
+						"parkiate-ki-default-rtdb",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Parking_Status",
+						"-Mq73KmXyn-fx7tlnIQn",
+						"-N-t_vx07IoxzsBpIURf",
+						"estado.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener todos los usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.12:3000/api/users/getAll",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener todos los parqueos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.12:3000/api/parqueos/getAll",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"12"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
