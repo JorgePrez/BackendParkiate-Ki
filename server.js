@@ -43,7 +43,7 @@ adminservicios(app);
 
 
 //server.listen(3000, '192.168.1.2' || 'localhost', function(){
-    server.listen(process.env.PORT ||  3000, '192.168.1.8' || 'localhost', function(){
+    server.listen(process.env.PORT ||  3000, '192.168.1.13' || 'localhost', function(){
 
     //correr en gitBash ipconfig, para ver que ip cambio....
    // console.log('Aplicacion de NodeJs ' + process.pid + ' Iniciada...')

@@ -22,6 +22,10 @@ module.exports = (app) => {
 
     app.post('/api/parqueos/findpark',ParqueosController.findIdpark); //nombre_de_tabla /  nombre de metodo
 
+    app.post('/api/parqueos/findfullpark',ParqueosController.findIdparkfirebase); //nombre_de_tabla /  nombre de metodo
+
+
+
     app.post('/api/parqueos/findparkamount',ParqueosController.findsamountpark); //nombre_de_tabla /  nombre de metodo
 
 

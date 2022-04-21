@@ -107,6 +107,34 @@ async getCoincidences(req, res, next) {
             });
         }
     },
+
+
+    
+    async findIdparkfirebase(req, res, next) {
+        try {
+           // const id = req.params.id;
+            const id_parqueo= req.body.id_parqueo;
+            const data = await Parqueos.findbyidFirebase(id_parqueo);    
+            console.log(`Parqueo: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({
+                message: 'Datos de parqueo obtenidos correctamente',
+                data: data ,
+                success: true,
+                                        
+        
+        
+            });
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener parqueo'
+            });
+        }
+    },
     
 
 
@@ -263,7 +291,7 @@ async getCoincidences(req, res, next) {
             console.log(`Error: ${error}`);
             return res.status(501).json({
                 success: false,
-                message: 'Error al obtener usuarios'
+                message: 'Error al obtener duenio'
             });
         }
     },

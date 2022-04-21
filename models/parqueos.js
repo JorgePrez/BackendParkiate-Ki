@@ -111,6 +111,48 @@ Parqueo.findbyid = (id_parqueo) => {
 }
 
 
+Parqueo.findbyidFirebase = (id_parqueo) => {
+    const sql = `
+    SELECT
+	id_parqueo,
+	id_duenio,
+	nombre_empresa,
+	direccion,
+	capacidad_maxima,
+	media_hora,
+	hora,
+	dia,
+	mes,
+	lunes_apertura,
+	lunes_cierre,
+	domingo_apertura,
+	domingo_cierre,
+	detalles,
+	imagenes,
+	latitude,
+	longitude,
+	martes_apertura,
+	martes_cierre,
+	miercoles_apertura,
+	miercoles_cierre,
+	jueves_apertura,
+	jueves_cierre,
+	viernes_apertura,
+	viernes_cierre,
+	sabado_apertura,
+	sabado_cierre,
+	control_pagos,
+	id_firebase
+    FROM
+        parqueo
+    WHERE
+        id_parqueo = $1
+    `;
+
+    return db.oneOrNone(sql, id_parqueo);
+}
+
+
 
 Parqueo.findPrize = (id_parqueo) => {
     const sql = `
@@ -170,9 +212,6 @@ Parqueo.UserbyCorreo = (correoo) => {
     const sql = `
 	select id_duenio,
 	nombre,
-	dpi,
-	nit,
-	telefono,
 	correoo
 	 from duenio 
 	 where correoo=$1
@@ -189,9 +228,6 @@ Parqueo.UserbyId = (id_duenio) => {
     const sql = `
 	select id_duenio,
 	nombre,
-	dpi,
-	nit,
-	telefono,
 	correoo
 	 from duenio 
 	 where id_duenio=$1
