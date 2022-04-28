@@ -438,6 +438,252 @@
 			"response": []
 		},
 		{
+			"name": "Servicios crear - Params",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"ABCA322\" ,\r\n     \"id_parqueo\": \"ADSFS\",\r\n     \"direccion\": \"DASDASDASDASDA\",\r\n     \"nombre_parqueo\": \"Dasdasdad\",\r\n     \"imagenes\": \"DdasDASDASDAd\", \r\n     \"id_usuario\": \"DASDASD\",\r\n     \"nombre_usuario\": \"DASDASDASDA\",\r\n     \"telefono\": \"dasdasdasd\",\r\n     \"modelo_auto\": \"SASDASDASD\",\r\n     \"placa_auto\": \"DADASD\",\r\n     \"fecha\": \"DASDas\",\r\n\t \"hora_deentrada\": \"DASDAS\",\r\n\t \"hora_desalida\": \"ADAS\",\r\n\t \"precio\": \"adasd\",\r\n\t \"parqueo_control_pagos\": \"dasd\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.17:3000/api/adminservicios/creates?id_servicio=ABCA322&id_parqueo=ABCA322&direccion=ABCA322&nombre_parqueo=ABCA322&imagenes=https://res.cloudinary.com/parkiate-ki/image/upload/v1637289837/js7fm6qekmuzyzg4i7ze.jpg&id_usuario=ABCA322&nombre_usuario=ABCA322&telefono=ABCA322&modelo_auto=ABCA322&placa_auto=ABCA322&fecha=ABCA322&hora_deentrada=ABCA322&hora_desalida=ABCA322&precio=ABCA322&parqueo_control_pagos=ABCA322",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"17"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"creates"
+					],
+					"query": [
+						{
+							"key": "id_servicio",
+							"value": "ABCA322"
+						},
+						{
+							"key": "id_parqueo",
+							"value": "ABCA322"
+						},
+						{
+							"key": "direccion",
+							"value": "ABCA322"
+						},
+						{
+							"key": "nombre_parqueo",
+							"value": "ABCA322"
+						},
+						{
+							"key": "imagenes",
+							"value": "https://res.cloudinary.com/parkiate-ki/image/upload/v1637289837/js7fm6qekmuzyzg4i7ze.jpg"
+						},
+						{
+							"key": "id_usuario",
+							"value": "ABCA322"
+						},
+						{
+							"key": "nombre_usuario",
+							"value": "ABCA322"
+						},
+						{
+							"key": "telefono",
+							"value": "ABCA322"
+						},
+						{
+							"key": "modelo_auto",
+							"value": "ABCA322"
+						},
+						{
+							"key": "placa_auto",
+							"value": "ABCA322"
+						},
+						{
+							"key": "fecha",
+							"value": "ABCA322"
+						},
+						{
+							"key": "hora_deentrada",
+							"value": "ABCA322"
+						},
+						{
+							"key": "hora_desalida",
+							"value": "ABCA322"
+						},
+						{
+							"key": "precio",
+							"value": "ABCA322"
+						},
+						{
+							"key": "parqueo_control_pagos",
+							"value": "ABCA322"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "end service, placa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"ABCA322\" ,\r\n     \"id_parqueo\": \"ADSFS\",\r\n     \"direccion\": \"DASDASDASDASDA\",\r\n     \"nombre_parqueo\": \"Dasdasdad\",\r\n     \"imagenes\": \"DdasDASDASDAd\", \r\n     \"id_usuario\": \"DASDASD\",\r\n     \"nombre_usuario\": \"DASDASDASDA\",\r\n     \"telefono\": \"dasdasdasd\",\r\n     \"modelo_auto\": \"SASDASDASD\",\r\n     \"placa_auto\": \"DADASD\",\r\n     \"fecha\": \"DASDas\",\r\n\t \"hora_deentrada\": \"DASDAS\",\r\n\t \"hora_desalida\": \"ADAS\",\r\n\t \"precio\": \"adasd\",\r\n\t \"parqueo_control_pagos\": \"dasd\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.8:3000/api/adminservicios/endservice?placa=P123SAT&id_parqueo=2CE369",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"endservice"
+					],
+					"query": [
+						{
+							"key": "placa",
+							"value": "P123SAT"
+						},
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Servicios crear - TRUE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"ABCA322\" ,\r\n     \"id_parqueo\": \"ADSFS\",\r\n     \"direccion\": \"DASDASDASDASDA\",\r\n     \"nombre_parqueo\": \"Dasdasdad\",\r\n     \"imagenes\": \"DdasDASDASDAd\", \r\n     \"id_usuario\": \"DASDASD\",\r\n     \"nombre_usuario\": \"DASDASDASDA\",\r\n     \"telefono\": \"dasdasdasd\",\r\n     \"modelo_auto\": \"SASDASDASD\",\r\n     \"placa_auto\": \"DADASD\",\r\n     \"fecha\": \"DASDas\",\r\n\t \"hora_deentrada\": \"DASDAS\",\r\n\t \"hora_desalida\": \"ADAS\",\r\n\t \"precio\": \"adasd\",\r\n\t \"parqueo_control_pagos\": \"dasd\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.8:3000/api/adminservicios/createservice?id_servicio=AER456&id_parqueo=2CE369&direccion=9%20Avenida%20,%2015%20calle%20A,%20Zona%2013,%20Guatemala&nombre_parqueo=Parqueo%20Club%20La%20Aurora&imagenes=https://res.cloudinary.com/parkiate-ki/image/upload/v1650150898/onygvi5qxcflm3ohhxhl.jpg&id_usuario=33&nombre_usuario=Jinsoul%20Lip&telefono=52364780&imagen_auto=https://res.cloudinary.com/parkiate-ki/image/upload/v1651150174/azul-f_zu202v.jpg&placa_auto=P123SAT&fecha=28-03-2022&hora_deentrada=07:00&hora_desalida=Por%20Definir&precio=Por%20Definir&parqueo_control_pagos=S&estado=proceso",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"createservice"
+					],
+					"query": [
+						{
+							"key": "id_servicio",
+							"value": "AER456"
+						},
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						},
+						{
+							"key": "direccion",
+							"value": "9%20Avenida%20,%2015%20calle%20A,%20Zona%2013,%20Guatemala"
+						},
+						{
+							"key": "nombre_parqueo",
+							"value": "Parqueo%20Club%20La%20Aurora"
+						},
+						{
+							"key": "imagenes",
+							"value": "https://res.cloudinary.com/parkiate-ki/image/upload/v1650150898/onygvi5qxcflm3ohhxhl.jpg"
+						},
+						{
+							"key": "id_usuario",
+							"value": "33"
+						},
+						{
+							"key": "nombre_usuario",
+							"value": "Jinsoul%20Lip"
+						},
+						{
+							"key": "telefono",
+							"value": "52364780"
+						},
+						{
+							"key": "imagen_auto",
+							"value": "https://res.cloudinary.com/parkiate-ki/image/upload/v1651150174/azul-f_zu202v.jpg"
+						},
+						{
+							"key": "placa_auto",
+							"value": "P123SAT"
+						},
+						{
+							"key": "fecha",
+							"value": "28-03-2022"
+						},
+						{
+							"key": "hora_deentrada",
+							"value": "07:00"
+						},
+						{
+							"key": "hora_desalida",
+							"value": "Por%20Definir"
+						},
+						{
+							"key": "precio",
+							"value": "Por%20Definir"
+						},
+						{
+							"key": "parqueo_control_pagos",
+							"value": "S"
+						},
+						{
+							"key": "estado",
+							"value": "proceso"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Listar servicios por id_parqueo",
 			"request": {
 				"method": "POST",
@@ -465,6 +711,72 @@
 						"api",
 						"adminservicios",
 						"historyadmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar servicios por id_parqueo TRUE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"2CE369\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.8:3000/api/adminservicios/historyservices",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"historyservices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar servicios por id_parqueo ACTUALES TRUE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"2CE369\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.8:3000/api/adminservicios/historyservices",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"historyservices"
 					]
 				}
 			},
@@ -571,6 +883,39 @@
 		},
 		{
 			"name": "Consulta por ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_servicio\": \"XvUm78Fhdsdsdsd\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.2:3000/api/adminservicios/getById",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"2"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"adminservicios",
+						"getById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta por ID RETRUE",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -939,6 +1284,39 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"2CE369\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.8:3000/api/parqueos/findpark",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"findpark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finy park by id (firebase)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
 					"raw": "{\r\n     \"id_parqueo\": \"2C4B14\" \r\n}\r\n\r\n",
 					"options": {
 						"raw": {
@@ -947,19 +1325,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.1.2:3000/api/parqueos/findpark",
+					"raw": "http://192.168.1.13:3000/api/parqueos/findfullpark",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"1",
-						"2"
+						"13"
 					],
 					"port": "3000",
 					"path": [
 						"api",
 						"parqueos",
-						"findpark"
+						"findfullpark"
 					]
 				}
 			},
@@ -1186,24 +1564,20 @@
 			"response": []
 		},
 		{
-			"name": "obtener todos los parqueos",
+			"name": "Obtener slots de un parqueo",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.12:3000/api/parqueos/getAll",
-					"protocol": "http",
+					"raw": "https://parkiate-ki-default-rtdb.firebaseio.com/Parking_Status.json",
+					"protocol": "https",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"12"
+						"parkiate-ki-default-rtdb",
+						"firebaseio",
+						"com"
 					],
-					"port": "3000",
 					"path": [
-						"api",
-						"parqueos",
-						"getAll"
+						"Parking_Status.json"
 					]
 				}
 			},

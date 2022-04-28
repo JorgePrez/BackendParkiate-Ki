@@ -9,6 +9,11 @@ module.exports = (app) => {
          //Registar servicios
 
     app.post('/api/adminservicios/create',AdminserviciosController.register);
+    app.get('/api/adminservicios/creates',AdminserviciosController.registerparams);
+
+    app.get('/api/adminservicios/createservice',AdminserviciosController.registerservice);
+
+
 
     //traer servicio por id
 
@@ -16,9 +21,20 @@ module.exports = (app) => {
     //TRAER POR ID
     app.post('/api/adminservicios/getById',AdminserviciosController.findById); //nombre_de_tabla /  nombre de metodo
 
+
+    app.post('/api/adminservicios/getServiceById',AdminserviciosController.findservicesById); //nombre_de_tabla /  nombre de metodo
+
+
     //Actualizar la efha de salida y cuanto se le cobro
 
     app.put('/api/adminservicios/update',AdminserviciosController.update); //perfil de usuario
+
+
+    app.put('/api/adminservicios/updatetrue',AdminserviciosController.updatereal); //perfil de usuario
+
+
+    
+    app.get('/api/adminservicios/endservice',AdminserviciosController.updateplaca);
 
 
     //Actualizacar cuando ya fue leido el QR
@@ -40,6 +56,14 @@ module.exports = (app) => {
      //Obtener servicios actuales
      
      app.post('/api/adminservicios/historyadminactual',AdminserviciosController.historyadminactual);
+
+
+     //Obtener servicios actuales
+     
+     app.post('/api/adminservicios/historyservices',AdminserviciosController.historia);
+
+     app.post('/api/adminservicios/historyservicesactuales',AdminserviciosController.historiaactual);
+
 
    
 
