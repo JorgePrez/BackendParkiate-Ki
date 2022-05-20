@@ -297,6 +297,149 @@ async getCoincidences(req, res, next) {
     },
 
 
+    async findplacaentrada(req, res, next) {
+        try {
+           const id_parqueo = req.query.id_parqueo;
+            const data = await Parqueos.placaentrada(id_parqueo);    
+            console.log(`Admin: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({
+                message: 'Ultima placa de entrada (link obtenido)',
+                data: data ,
+                success: true,
+                                        
+        
+            });
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener placa'
+            });
+        }
+    },
+
+
+    async findplacasalida(req, res, next) {
+        try {
+           const id_parqueo = req.query.id_parqueo;
+            const data = await Parqueos.placasalida(id_parqueo);    
+            console.log(`Admin: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({
+                message: 'Ultima placa de entrada (link obtenido)',
+                data: data ,
+                success: true,
+                                        
+        
+            });
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener placa'
+            });
+        }
+    },
+
+
+    async findplacaentradaURL(req, res, next) {
+        try {
+           const id_parqueo = req.query.id_parqueo;
+            const data = await Parqueos.placaentrada(id_parqueo);    
+            console.log(`Admin: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({data
+                                        
+        
+            });
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener placa'
+            });
+        }
+    },
+
+
+    async detectplacaentrada(req, res, next) {
+        try {
+           const id_placa_entrada = req.query.id_placa;
+           const numerodeplaca = req.query.numero_placa;
+
+            const data = await Parqueos.deteccion_entrada(id_placa_entrada,numerodeplaca);    
+            console.log(`Admin: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({
+                                        
+        
+            });
+          
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al registrar placa'
+            });
+        }
+    },
+
+
+    async detectplacasalida(req, res, next) {
+        try {
+           const id_placa_salida = req.query.id_placa;
+           const numerodeplaca = req.query.numero_placa;
+
+            const data = await Parqueos.deteccion_salida(id_placa_salida,numerodeplaca);    
+            console.log(`Admin: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({
+                                        
+        
+            });
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al registrar placa'
+            });
+        }
+    },
+    async findplacasalidaURL(req, res, next) {
+        try {
+           const id_parqueo = req.query.id_parqueo;
+            const data = await Parqueos.placasalida(id_parqueo);    
+            console.log(`Admin: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({data
+                 
+               
+                                        
+        
+            });
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener placa'
+            });
+        }
+    },
+
+
+
     
     
 

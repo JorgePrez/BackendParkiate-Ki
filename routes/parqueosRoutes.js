@@ -34,5 +34,20 @@ module.exports = (app) => {
 
     app.post('/api/parqueos/dueniobyid',ParqueosController.findadminbyid); //nombre_de_tabla /  nombre de metodo
 
+    app.get('/api/parqueos/foto_entrada',ParqueosController.findplacaentrada); //nombre_de_tabla /  nombre de metodo
+
+    app.get('/api/parqueos/foto_salida',ParqueosController.findplacasalida); //nombre_de_tabla /  nombre de metodo
+
+    app.get('/api/parqueos/foto_entrada_url',ParqueosController.findplacaentradaURL); //nombre_de_tabla /  nombre de metodo
+
+    app.get('/api/parqueos/foto_salida_url',ParqueosController.findplacasalidaURL); //nombre_de_tabla /  nombre de metodo
+
+    app.get('/api/parqueos/writeplaca_entrada',ParqueosController.detectplacaentrada); //nombre_de_tabla /  nombre de metodo
+
+    app.get('/api/parqueos/writeplaca_salida',ParqueosController.detectplacasalida); //nombre_de_tabla /  nombre de metodo
+
+
+    
+
 
 }   

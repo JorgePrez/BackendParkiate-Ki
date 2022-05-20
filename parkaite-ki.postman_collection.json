@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "340b52a5-51c6-4810-9ff7-122a5a016cfb",
+		"_postman_id": "227e3de1-cfd5-4750-b4e3-9a0226d67cad",
 		"name": "parkaite-ki",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17850209"
 	},
 	"item": [
 		{
@@ -308,6 +309,370 @@
 			"response": []
 		},
 		{
+			"name": "enviando foto local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80/camara/index.php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"camara",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enviando foto local prueba 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "image",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/parkiate-ki/formularios/fotografia_tomada.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"parkiate-ki",
+						"formularios",
+						"fotografia_tomada.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.15/picture",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"15"
+					],
+					"path": [
+						"picture"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost/parkiate-ki/upload.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"parkiate-ki",
+						"upload.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php BACK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost/parkiate-ki/upload-frente.php?id_parqueo=2CE369",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"parkiate-ki",
+						"upload-frente.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.10:3000/api/parqueos/writeplaca_salida?id_placa=58A587&numero_placa=SOMI123",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"10"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"writeplaca_salida"
+					],
+					"query": [
+						{
+							"key": "id_placa",
+							"value": "58A587"
+						},
+						{
+							"key": "numero_placa",
+							"value": "SOMI123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php API BACK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.10:3000/api/parqueos/foto_salida?id_parqueo=2CE369",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"10"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"parqueos",
+						"foto_salida"
+					],
+					"query": [
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php BACK Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost/parkiate-ki/upload-frente.php?id_parqueo=2CE369",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"parkiate-ki",
+						"upload-frente.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php BACK Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost/parkiate-ki/upload-atras.php?id_parqueo=2CE369",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"parkiate-ki",
+						"upload-atras.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo in php BACK Copy 2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost/parkiate-ki/upload-atras.php?id_parqueo=2CE369",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"parkiate-ki",
+						"upload-atras.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo",
+							"value": "2CE369"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get photo Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:80/camara/index.php",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "80",
+					"path": [
+						"camara",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "http://192.168.1.2:3000/api/users/getById Copy 2",
 			"request": {
 				"method": "POST",
@@ -553,7 +918,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.1.8:3000/api/adminservicios/endservice?placa=P123SAT&id_parqueo=2CE369",
+					"raw": "http://192.168.1.8:3000/api/adminservicios/endservice?placa=P678BBB&id_parqueo=2CE369",
 					"protocol": "http",
 					"host": [
 						"192",
@@ -570,7 +935,7 @@
 					"query": [
 						{
 							"key": "placa",
-							"value": "P123SAT"
+							"value": "P678BBB"
 						},
 						{
 							"key": "id_parqueo",
@@ -921,7 +1286,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"id_servicio\": \"XvUm78Fhdsdsdsd\" \r\n}\r\n\r\n",
+					"raw": "{\r\n     \"id_servicio\": \"AER999\" \r\n}\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -929,19 +1294,19 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.1.2:3000/api/adminservicios/getById",
+					"raw": "http://192.168.1.8:3000/api/adminservicios/getServiceById",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"1",
-						"2"
+						"8"
 					],
 					"port": "3000",
 					"path": [
 						"api",
 						"adminservicios",
-						"getById"
+						"getServiceById"
 					]
 				}
 			},

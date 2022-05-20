@@ -252,6 +252,98 @@ Parqueo.findParks = (id_duenio,id_parqueo) => {
 
 }
 
+//Obteniendo la ultimas placas 
+
+
+Parqueo.findParks = (id_duenio,id_parqueo) => {
+    const sql = `
+	select Count(*) 
+	as cantidad_espacios 
+	from duenio,parqueo
+	where duenio.id_duenio=parqueo.id_duenio AND parqueo.id_duenio=$1 AND id_parqueo =$2
+    `;
+    return db.oneOrNone(sql, [
+		id_duenio,
+	    id_parqueo,
+	]);
+
+}
+
+
+//Obtener placas de entrada
+Parqueo.placaentrada = (id_parqueo) => {
+    const sql = `
+	select id_placa_entrada,link_entrada 
+	from 
+	placas_entrada 
+	where 
+	hora_deteccion_entrada =(select max(hora_deteccion_entrada) from placas_entrada) AND id_parqueo=$1
+    `;
+	return db.oneOrNone(sql, id_parqueo);
+
+
+}
+
+//Obtener placas de salida
+
+Parqueo.placasalida = (id_parqueo) => {
+    const sql = `
+	select id_placa_salida,link_salida
+	 from
+	  placas_salida 
+	  where hora_deteccion_salida = (select max(hora_deteccion_salida) from placas_salida) 
+	AND id_parqueo=$1
+    `;
+	return db.oneOrNone(sql, id_parqueo);
+
+
+}
+
+// SEGUN UN ID DE UNA IMAGEN RETORNANA UN TEXTO EL CUAL CORRESPONDE AL NUMERO DE PLACA
+
+Parqueo.deteccion_entrada = (id_placa_entrada,numerodeplaca) =>{
+
+    const sql = `
+    UPDATE 
+    placas_entrada
+ SET 
+ deteccion_entrada=$2
+ WHERE
+     id_placa_entrada = $1 
+        `; 
+
+
+        return db.oneOrNone(sql, [
+             id_placa_entrada ,
+             numerodeplaca,
+        ]);
+
+
+ }
+
+
+ Parqueo.deteccion_salida = (id_placa_salida,numerodeplaca) =>{
+
+    const sql = `
+    UPDATE 
+    placas_salida
+ SET 
+ deteccion_salida=$2
+ WHERE
+     id_placa_salida = $1 
+        `; 
+
+
+        return db.oneOrNone(sql, [
+             id_placa_salida ,
+             numerodeplaca,
+        ]);
+
+
+ }
+
+
+
 
 
 

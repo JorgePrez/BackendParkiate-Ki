@@ -62,7 +62,7 @@ Adminservicio.findservisById = (id_servicio) => {
 FROM
    servicios
 WHERE 
-   id_servicio =$1
+   id_servicio=$1
     `
     return db.oneOrNone(sql, id_servicio);
 }
