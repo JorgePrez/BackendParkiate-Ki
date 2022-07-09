@@ -4,9 +4,13 @@ const ParqueosController = require('../controllers/parqueosControllers'); //Cons
 module.exports = (app) => {
 
 
-    //obtener todos los parqueos
-    
-    app.get('/api/parqueos/getAll',ParqueosController.getAll); //nombre_de_tabla /  nombre de metodo 
+    //obtener todos los parqueos  
+    app.get('/api/parqueos/getAll',ParqueosController.getAll); 
+
+    //Login de usuario
+
+    app.post('/api/parqueos/login',ParqueosController.login_admin);
+
 
   
         //TREAR Servicios por usuario (APP)
@@ -18,7 +22,7 @@ module.exports = (app) => {
 
     app.post('/api/parqueos/reviews',ParqueosController.findsreviews); //nombre_de_tabla /  nombre de metodo
 
-    app.post('/api/parqueos/login',ParqueosController.findsuser); //nombre_de_tabla /  nombre de metodo
+    app.post('/api/parqueos/login2',ParqueosController.findsuser); //nombre_de_tabla /  nombre de metodo  //DEBE SER ELIMINADA YA
 
     app.post('/api/parqueos/findpark',ParqueosController.findIdpark); //nombre_de_tabla /  nombre de metodo
 

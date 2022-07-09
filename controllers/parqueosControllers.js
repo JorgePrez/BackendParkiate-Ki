@@ -1,6 +1,7 @@
 
 //el controlador debe tener el mismo nombre que el modelo solo que en plural usersController
 
+const Parqueo = require('../models/parqueos');
 const { findPrize } = require('../models/parqueos');
 const Parqueos = require('../models/parqueos'); //const modelo mayuscula primer User
 
@@ -441,7 +442,55 @@ async getCoincidences(req, res, next) {
 
 
     
+    // Administrador haciendo login
+
+    async login_admin(req, res, next) {
+        try {
+            const email = req.body.email;
+            const password = req.body.password;
     
+            const myAdmin = await Parqueo.findByEmail(email);
+    
+            if (!myAdmin) {
+                return res.status(401).json({
+                    success: false,
+                    message: 'El email no fue encontrado'
+                });
+            }
+    
+            if (Parqueo.isPasswordMatched(password, myAdmin.password)) {
+              
+    
+                const data = {
+                    id_duenio: myAdmin.id_duenio,
+                    email: myAdmin.email,
+                    id_parqueo: myAdmin.id_parqueo
+                }
+    
+                return res.status(201).json({
+                   // success: true,
+                    data: data,
+                    message: 'El administrador ha sido autenticado',
+                    success: true,
+                });
+            }
+            else {
+                return res.status(401).json({
+                    success: false,
+                    message: 'La contraseña es incorrecta'
+                });
+            }
+    
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al momento de hacer login',
+                error: error
+            });
+        }
+    },
 
 
 

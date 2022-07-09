@@ -1,6 +1,5 @@
 const db = require('../config/config');
-
-
+const crypto = require('crypto');
 
 
 const Parqueo = {};  //mismo nombre que el modelo solo que primera mayuscula
@@ -344,6 +343,30 @@ Parqueo.deteccion_entrada = (id_placa_entrada,numerodeplaca) =>{
 
 
 
+
+ //-----------------------------LOGIN----------------------------------------
+
+				//Datos de adminitrador por email
+
+				Parqueo.findByEmail = (email) => {
+
+					const sql =  `select id_duenio,email,password,id_parqueo from duenio where email=$1`; 
+					return db.oneOrNone(sql,email);
+				
+
+				}
+
+
+				//Funcion para comprobar contraseña de usuario administrador de parqueo
+
+				Parqueo.isPasswordMatched = (adminPassword , hash) =>{
+					const myPasswordHashed  = crypto.createHash('md5').update(adminPassword).digest('hex');
+					if(myPasswordHashed=== hash ){
+						return true;
+					}
+					return false;
+				}
+//----------------------------------------------------------------------------------------------
 
 
 
