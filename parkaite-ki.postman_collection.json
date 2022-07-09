@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "227e3de1-cfd5-4750-b4e3-9a0226d67cad",
+		"_postman_id": "8106526f-e96e-4723-9c7e-b8310b9a3c44",
 		"name": "parkaite-ki",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17850209"
@@ -1910,15 +1910,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.12:3000/api/users/getAll",
-					"protocol": "http",
+					"raw": "{{url}}/api/users/getAll",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"12"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"users",
