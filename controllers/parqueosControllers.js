@@ -275,7 +275,7 @@ async getCoincidences(req, res, next) {
     async findadminbyid(req, res, next) {
         try {
            // const id = req.params.id;
-            const id_duenio= req.body.correoo;
+            const id_duenio= req.body.id_duenio;
             const data = await Parqueos.UserbyId(id_duenio);    
             console.log(`Admin: ${data}`);
             //return res.status(201).json(data);

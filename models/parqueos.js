@@ -226,8 +226,8 @@ Parqueo.UserbyCorreo = (correoo) => {
 Parqueo.UserbyId = (id_duenio) => {
     const sql = `
 	select id_duenio,
-	nombre,
-	correoo
+	email,
+	id_parqueo
 	 from duenio 
 	 where id_duenio=$1
 
