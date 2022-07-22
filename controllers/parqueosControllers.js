@@ -82,6 +82,32 @@ async getCoincidences(req, res, next) {
     },
 
 
+  
+    //obteniendo todos los slots de un parqueo
+    //CONTROLADOR DE MODELO: Parqueo.allslots
+    async allslotscontroller(req, res, next) {
+        try {
+           // const id = req.params.id;
+
+           const id_parqueo= req.body.id_parqueo;
+           const data = await Parqueo.allslots(id_parqueo);
+           return res.status(201).json(data);
+
+         
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener parqueo',
+                error: error
+
+            });
+        }
+    },
+
+
 
     async findIdpark(req, res, next) {
         try {

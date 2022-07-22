@@ -68,6 +68,16 @@ Parqueo.findByKeyWord = (akeyword) => {
 }
 
 
+//Obteniendo todos los slots de un parqueo
+Parqueo.allslots = (id_parqueo) => {
+    const sql = `
+    SELECT
+	id_slot, codigo, estado, reservas, img_slot, timestamp_cambio_ocupado, timestamp_cambio_vacio
+    FROM  slots WHERE id_parqueo = $1  ORDER by codigo
+    `;
+
+    return db.manyOrNone(sql, id_parqueo);
+}
 
 Parqueo.findbyid = (id_parqueo) => {
     const sql = `

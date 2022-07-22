@@ -11,6 +11,9 @@ module.exports = (app) => {
 
     app.post('/api/parqueos/login',ParqueosController.login_admin);
 
+    app.post('/api/parqueos/allslots',ParqueosController.allslotscontroller); //Ruta de controllador all_slots
+
+
 
   
         //TREAR Servicios por usuario (APP)
