@@ -1924,6 +1924,146 @@
 			"response": []
 		},
 		{
+			"name": "LOGIN USUARIO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"javierperez@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL SLOTS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"2CE369\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN ADMINISTRADOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"yeriperez@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parqueos/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN ADMINISTRADOR PARQUEO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"86BE48\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parqueos/findfullpark",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"findfullpark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND DUENIO BY ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"yeriperez@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parqueos/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Obtener slots de un parqueo",
 			"request": {
 				"method": "GET",
