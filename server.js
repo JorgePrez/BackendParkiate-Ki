@@ -15,6 +15,8 @@ const resenias = require('./routes/reseniasRoutes');
 const parqueos = require('./routes/parqueosRoutes');
 const adminservicios = require('./routes/adminserviciosRoutes');
 
+const usuarios_app = require('./routes/usuarios_appRoutes');
+
 
 
 
@@ -40,10 +42,12 @@ users(app);
 resenias(app);
 parqueos(app);
 adminservicios(app);
+usuarios_app(app);
+
 
 
 //server.listen(3000, '192.168.1.2' || 'localhost', function(){
-    server.listen(process.env.PORT ||  3000, '192.168.1.16' || 'localhost', function(){
+    server.listen(process.env.PORT ||  3000, '192.168.1.25' || 'localhost', function(){
 
     //correr en gitBash ipconfig, para ver que ip cambio....
    // console.log('Aplicacion de NodeJs ' + process.pid + ' Iniciada...')
