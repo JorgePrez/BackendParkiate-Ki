@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"email\": \"george3@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"jorge perez\",\r\n     \"telefono\": \"56788945\",\r\n\t \"foto_perfil\": \"'https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\"\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n     \"email\": \"george70@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"jorge perez\",\r\n     \"telefono\": \"56788945\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"email\": \"george2@gmail.com\",\r\n     \"password\": \"579!!Oo2961\"\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n     \"email\": \"george5@gmail.com\",\r\n     \"password\": \"579!!Oo296\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,7 +69,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"id_usuario\": \"74\"\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n     \"id_usuario\": \"1\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -119,13 +119,13 @@
 			"response": []
 		},
 		{
-			"name": "usuarios_app/getuserbyemail Copy",
+			"name": "usuarios_app/modifyuser",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\" : \"1\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n    \"id\" : \"6\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\",\r\n     \"id_visita_actual\": \"758968ADG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -141,6 +141,412 @@
 						"api",
 						"usuarios_app",
 						"modifyuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prueba php ngrok",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"6\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\",\r\n     \"id_visita_actual\": \"758968ADG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://c6bd-190-148-51-125.ngrok.io/Parkiate-web/backend_visitas/prueba.php",
+					"protocol": "https",
+					"host": [
+						"c6bd-190-148-51-125",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"Parkiate-web",
+						"backend_visitas",
+						"prueba.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas/getbyid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_visitas_app\" : \"ABC1234DS\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url2}}/Parkiate-web/backend/getbyid.php?id_visitas_app=ABC1234DS",
+					"host": [
+						"{{url2}}"
+					],
+					"path": [
+						"Parkiate-web",
+						"backend",
+						"getbyid.php"
+					],
+					"query": [
+						{
+							"key": "id_visitas_app",
+							"value": "ABC1234DS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas/getbyuser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"6\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\",\r\n     \"id_visita_actual\": \"758968ADG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url2}}/Parkiate-web/backend/getbyuser.php?id_usuario_app=8",
+					"host": [
+						"{{url2}}"
+					],
+					"path": [
+						"Parkiate-web",
+						"backend",
+						"getbyuser.php"
+					],
+					"query": [
+						{
+							"key": "id_usuario_app",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas/getbypark",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"6\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\",\r\n     \"id_visita_actual\": \"758968ADG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url2}}/Parkiate-web/backend/getbypark.php?id_parqueo_app=86BE48",
+					"host": [
+						"{{url2}}"
+					],
+					"path": [
+						"Parkiate-web",
+						"backend",
+						"getbypark.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo_app",
+							"value": "86BE48"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas/getparkactive",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"6\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\",\r\n     \"id_visita_actual\": \"758968ADG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url2}}/Parkiate-web/backend/getbyparkactive.php?id_parqueo_app=86BE48",
+					"host": [
+						"{{url2}}"
+					],
+					"path": [
+						"Parkiate-web",
+						"backend",
+						"getbyparkactive.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo_app",
+							"value": "86BE48"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resenias_app/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_usuario_movil\": \"11\" ,\r\n     \"id_parqueo\": \"123ABC\",\r\n     \"calificacion\": \"5.0\",\r\n     \"comentario\": \"todo good\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/resenias_app/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"resenias_app",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resenias_app/getbypark",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"123ABC\" \r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/resenias_app/getbypark",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"resenias_app",
+						"getbypark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resenias_app/getfullreviews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"123ABC\" \r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/resenias_app/getfullreviews",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"resenias_app",
+						"getfullreviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resenias_app/count_reviewspark",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_usuario_movil\": \"25\" ,\r\n     \"id_parqueo\": \"123ABC\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/resenias_app/countreviews",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"resenias_app",
+						"countreviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resenias_app/getreview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_usuario_movil\": \"7\" ,\r\n     \"id_parqueo\": \"123ABC\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/resenias_app/getreview",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"resenias_app",
+						"getreview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resenias_app/updatereview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_usuario_movil\": \"7\" ,\r\n     \"id_parqueo\": \"123ABC\",\r\n     \"calificacion\" :\"5.0\",\r\n     \"comentario\" : \"asdadasdasdasdasdasdas\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/resenias_app/updatereview",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"resenias_app",
+						"updatereview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas_app/getbyuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\" : 8\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/visitas_app/getbyuser",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"visitas_app",
+						"getbyuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas_app/getbypark",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_parqueo\" : \"86BE48\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/visitas_app/getbypark",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"visitas_app",
+						"getbypark"
 					]
 				}
 			},
@@ -1170,15 +1576,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.1.12:3000/api/adminservicios/historyadmin",
-					"protocol": "http",
+					"raw": "{{url}}/api/adminservicios/historyadmin",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"12"
+						"{{url}}"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"adminservicios",

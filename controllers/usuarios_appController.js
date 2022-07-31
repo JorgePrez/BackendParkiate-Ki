@@ -63,7 +63,8 @@ module.exports = {
                 nombre: myUsuarioapp.nombre,
                 telefono: myUsuarioapp.telefono,
                 foto_perfil: myUsuarioapp.foto_perfil,
-                timestamp_creacion: myUsuarioapp.timestamp_creacion
+                timestamp_creacion: myUsuarioapp.timestamp_creacion,
+                id_visita_actual: myUsuarioapp.id_visita_actual
 
             }
 
