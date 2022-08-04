@@ -119,6 +119,18 @@ Usuario_app.update = (user) =>{
  }
 
 
+ Usuario_app.getautosbyuser = (id_usuario) => {
+    const sql = `
+    select DISTINCT ON (placa) 
+    placa,foto_delante,fecha_registro_auto 
+    from auto where id_usuario_app=$1 order by placa
+    `;
+
+    return db.manyOrNone(sql, id_usuario);
+
+}
+
+
 
 
 

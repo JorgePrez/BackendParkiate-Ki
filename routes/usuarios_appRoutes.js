@@ -23,6 +23,9 @@ module.exports = (app) => {
 
        app.post('/api/usuarios_app/modifyuser',Usuarios_appController.update); 
 
+       app.post('/api/usuarios_app/autosbyuser',Usuarios_appController.autosbyuserc);
+
+
 
 
 

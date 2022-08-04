@@ -56,6 +56,32 @@ async getbypark(req, res, next) {
 },
 
 
+async id_visitas_controller(req, res, next) {
+
+
+ 
+    try {
+        const id_usuario= req.body.id_usuario;
+        const id_visita= req.body.id_visita;
+        const data = await VisitasApp.getbyid_visitas(id_usuario,id_visita);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar las visitas actuales por usuario`,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
+
+
+
 //resenias_app/
 
 

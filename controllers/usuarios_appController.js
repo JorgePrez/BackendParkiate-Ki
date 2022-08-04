@@ -217,6 +217,30 @@ async update(req, res, next) {
         });
     }
 },
+
+
+async autosbyuserc(req, res, next) {
+
+
+ 
+    try {
+        const id_usuario= req.body.id_usuario;
+        const data = await Usuario_app.getautosbyuser(id_usuario);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar los autos por usuario`,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
     
 
 
