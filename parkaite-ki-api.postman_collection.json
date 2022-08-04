@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"email\": \"george70@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"jorge perez\",\r\n     \"telefono\": \"56788945\"\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n     \"email\": \"jensontrue@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"Jenson Botones\",\r\n     \"telefono\": \"56124567\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"email\": \"george5@gmail.com\",\r\n     \"password\": \"579!!Oo296\"\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n     \"email\": \"jensontrue@gmail.com\",\r\n     \"password\": \"579!!Oo296\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -147,6 +147,34 @@
 			"response": []
 		},
 		{
+			"name": "usuarios_app/getuser Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_usuario\": \"8\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/usuarios_app/autosbyuser",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"usuarios_app",
+						"autosbyuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "prueba php ngrok",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -175,6 +203,49 @@
 						"Parkiate-web",
 						"backend_visitas",
 						"prueba.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar desde app",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : \"6\",\r\n     \"nombre\": \"66 giovanni giorgio\",\r\n     \"telefono\": \"66 6 5678894s\",\r\n     \"foto_perfil\": \"66 6https://res.cloudinary.com/parkiate-ki/image/upload/v1658810442/parqueos/86BE48/camara_entrada/vehiculo/rs4axdvmd0fi3tpb3xlt.jpg\",\r\n     \"id_visita_actual\": \"758968ADG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://parkiateki.ngrok.io/Parkiate-web/registrar_desde_app.php?id_parqueo=86BE48&id_usuario=8",
+					"protocol": "https",
+					"host": [
+						"parkiateki",
+						"ngrok",
+						"io"
+					],
+					"path": [
+						"Parkiate-web",
+						"registrar_desde_app.php"
+					],
+					"query": [
+						{
+							"key": "id_parqueo",
+							"value": "86BE48"
+						},
+						{
+							"key": "id_usuario",
+							"value": "8"
+						}
 					]
 				}
 			},
@@ -503,7 +574,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id_usuario\" : 8\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n    \"id_usuario\" : \"8\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -547,6 +618,34 @@
 						"api",
 						"visitas_app",
 						"getbypark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas_app/getactual",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_usuario\" : \"8\",\r\n    \"id_visita\": \"8CHFDG\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/visitas_app/getactual",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"visitas_app",
+						"getactual"
 					]
 				}
 			},
