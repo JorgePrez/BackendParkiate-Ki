@@ -31,6 +31,29 @@ async getbyuser(req, res, next) {
 
 },
 
+
+async getbyuserrecenct(req, res, next) {
+
+
+    try {
+        const id_usuario= req.body.id_usuario;
+
+        const data = await VisitasApp.getmostrecent(id_usuario);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar las visitas por usuario`,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
 //visitas_app/getbypark
 
 async getbypark(req, res, next) {
@@ -70,7 +93,7 @@ async id_visitas_controller(req, res, next) {
     catch (error) {
         console.log(`Error: ${error}`);
         return res.status(501).json({
-            message: `Error al listar las visitas actuales por usuario`,
+            message: `Error al listar visita por id actuales por usuario`,
             success: false,
             error: error
         });

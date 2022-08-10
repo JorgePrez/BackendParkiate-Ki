@@ -103,8 +103,7 @@ Usuario_app.update = (user) =>{
     SET 
         nombre = $2,
         telefono = $3, 
-        foto_perfil =$4,
-        id_visita_actual=$5
+        foto_perfil =$4
     WHERE
         id = $1
         `; 
@@ -113,9 +112,8 @@ Usuario_app.update = (user) =>{
             user.id,
             user.nombre,
             user.telefono,
-            user.foto_perfil,
-            user.id_visita_actual
-        ]);
+            user.foto_perfil
+                ]);
  }
 
 
@@ -123,7 +121,7 @@ Usuario_app.update = (user) =>{
     const sql = `
     select DISTINCT ON (placa) 
     placa,foto_delante,fecha_registro_auto 
-    from auto where id_usuario_app=$1 order by placa
+    from auto where id_usuario_app=CAST ($1 AS TEXT) order by placa,fecha_registro_auto asc NULLS LAST
     `;
 
     return db.manyOrNone(sql, id_usuario);
