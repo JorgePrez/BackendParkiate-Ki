@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"email\": \"jensontrue@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"Jenson Botones\",\r\n     \"telefono\": \"56124567\"\r\n}\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n     \"email\": \"yurina@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"Kawaguchi Yurina\",\r\n     \"telefono\": \"56124500\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -674,6 +674,34 @@
 						"api",
 						"visitas_app",
 						"getbypark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas_app/parkactuales",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_parqueo\" : \"86BE48\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/visitas_app/parkactuales",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"visitas_app",
+						"parkactuales"
 					]
 				}
 			},

@@ -14,6 +14,9 @@ module.exports = (app) => {
 
     app.post('/api/visitas_app/getactual',VisitasControllerApp.id_visitas_controller);
 
+    app.post('/api/visitas_app/parkactuales',VisitasControllerApp.obteniendoactualescontrolador);
+
+
 
 
 

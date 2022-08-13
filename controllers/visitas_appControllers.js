@@ -104,8 +104,30 @@ async id_visitas_controller(req, res, next) {
 
 
 
+//currents by park
 
-//resenias_app/
+
+async obteniendoactualescontrolador(req, res, next) {
+
+
+ 
+    try {
+        const id_parqueo= req.body.id_parqueo;
+        const data = await VisitasApp.obteniendoactuales(id_parqueo);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar las visitas actuales del parqueo`,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
 
 
 

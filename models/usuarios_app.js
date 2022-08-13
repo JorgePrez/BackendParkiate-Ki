@@ -119,10 +119,17 @@ Usuario_app.update = (user) =>{
 
  Usuario_app.getautosbyuser = (id_usuario) => {
     const sql = `
-    select DISTINCT ON (placa) 
+    DROP view IF EXISTS VISTA1   ;
+
+    create view VISTA1 as select DISTINCT ON (placa) 
     placa,foto_delante,fecha_registro_auto 
     from auto where id_usuario_app=CAST ($1 AS TEXT) order by placa,fecha_registro_auto asc NULLS LAST
-    `;
+    ;
+
+    SELECT * FROM VISTA1 ORDER BY fecha_registro_auto desc
+    
+    `
+    ;
 
     return db.manyOrNone(sql, id_usuario);
 

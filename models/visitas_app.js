@@ -148,6 +148,39 @@ order by hora_deteccion_salida desc
 	]);
 }
 
+//Obtener visitas actuales (usuarios dentro de parqueo)
+VisitasApp.obteniendoactuales = (id_parqueo) => {
+    const sql = `
+    select 
+    foto_auto_entrada as img_auto,
+    deteccion_entrada_salida as numero_placa, 
+      tiempo_total ,
+  hora_deteccion_entrada as timestamp_entrada,
+  email,
+  telefono,
+  id_entrada_salida as id_visita,
+  nombre_empresa as nombre_parqueo,
+  direccion,
+  imagenes as imagen_parqueo,
+  control_pagos as tipo_registro
+  from 
+  placas_entrada_salida,
+  placas_entrada,
+  parqueo,
+  usuarios_app
+  where placas_entrada_salida.id_parqueo=$1
+  and tiempo_total='NA'
+  and id_deteccion_entrada=id_placa_entrada 
+  and placas_entrada_salida.id_parqueo=parqueo.id_parqueo
+  and id_usuario_app= CAST (usuarios_app.id AS TEXT)
+  order by hora_deteccion_entrada desc
+    `;
+
+    return db.manyOrNone(sql, id_parqueo);
+}
+
+
+
 
 
 
