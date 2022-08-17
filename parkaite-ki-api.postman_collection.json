@@ -736,6 +736,146 @@
 			"response": []
 		},
 		{
+			"name": "parqueos/slotstate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_parqueo\" : \"2CE369\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parqueos/slotstate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"slotstate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas_app/all",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_parqueo\" : \"86BE48\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/visitas_app/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"visitas_app",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "visitas_app/allcurrent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_parqueo\" : \"86BE48\"\r\n\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/visitas_app/allcurrent",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"visitas_app",
+						"allcurrent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parqueos/findpark",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_parqueo\": \"2CE369\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parqueos/findpark",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"findpark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parqueos/findvisita",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id_entrada_salida\": \"EE1HD7\" \r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/parqueos/findvisita",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"parqueos",
+						"findvisita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "https://api.mapbox.com/geocoding/v5/mapbox.places/-73.989,40.733.json?access_token=pk.eyJ1Ijoiam9yZ2VwcmV6IiwiYSI6ImNrdmNwMGFkYzBwOTEydW55MDdrM3prbHkifQ.yXmk5FOgSeMGFALrPj3x2w&language=es",
 			"request": {
 				"method": "GET",

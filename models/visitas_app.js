@@ -179,6 +179,72 @@ VisitasApp.obteniendoactuales = (id_parqueo) => {
     return db.manyOrNone(sql, id_parqueo);
 }
 
+//OBTENER TODO EL LISTADO DE VISITAS ACTUALES
+
+
+VisitasApp.allvisitas = (id_parqueo) => {
+    const sql = `
+    select 
+    foto_auto_entrada as img_auto,
+    deteccion_entrada_salida as numero_placa, 
+tiempo_total ,
+
+  id_usuario_app  ,
+  hora_deteccion_entrada as timestamp_entrada,
+  hora_deteccion_salida as timestamp_salida ,
+
+  id_entrada_salida as id_visita,
+  nombre_empresa as nombre_parqueo,
+  direccion,
+  imagenes as imagen_parqueo,
+  control_pagos as tipo_registro
+  from 
+  placas_entrada_salida,
+  placas_entrada,
+  placas_salida,
+  parqueo
+  where placas_entrada_salida.id_parqueo=$1 
+  and id_deteccion_entrada=id_placa_entrada and id_deteccion_salida=id_placa_salida
+  and placas_entrada_salida.id_parqueo=parqueo.id_parqueo
+  order by hora_deteccion_salida desc
+    `;
+
+    return db.manyOrNone(sql, id_parqueo);
+}
+
+
+VisitasApp.allvisitasactual = (id_parqueo) => {
+    const sql = `
+    select 
+    foto_auto_entrada as img_auto,
+    deteccion_entrada_salida as numero_placa, 
+      tiempo_total ,
+      id_usuario_app,
+  hora_deteccion_entrada as timestamp_entrada,
+  id_entrada_salida as id_visita,
+  nombre_empresa as nombre_parqueo,
+  direccion,
+  imagenes as imagen_parqueo,
+  control_pagos as tipo_registro
+  from 
+  placas_entrada_salida,
+  placas_entrada,
+  parqueo
+  where placas_entrada_salida.id_parqueo=$1 and tiempo_total='NA'
+  and id_deteccion_entrada=id_placa_entrada 
+  and placas_entrada_salida.id_parqueo=parqueo.id_parqueo
+  order by hora_deteccion_entrada desc
+    `;
+
+    return db.manyOrNone(sql, id_parqueo);
+}
+
+
+
+
+
+
+
 
 
 

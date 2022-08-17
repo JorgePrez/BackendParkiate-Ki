@@ -162,6 +162,33 @@ async getCoincidences(req, res, next) {
             });
         }
     },
+
+
+    async findId_entrada_salida(req, res, next) {
+        try {
+           // const id = req.params.id;
+            const id_entrada_salida= req.body.id_entrada_salida;
+            const data = await Parqueos.findActualVisit(id_entrada_salida);    
+            console.log(`Parqueo: ${data}`);
+            //return res.status(201).json(data);
+            return res.status(201).json({
+                message: 'Datos de parqueo obtenidos correctamente',
+                data: data ,
+                success: true,
+                                        
+        
+        
+            });
+            
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                success: false,
+                message: 'Error al obtener parqueo'
+            });
+        }
+    },
     
 
 
@@ -516,6 +543,29 @@ async getCoincidences(req, res, next) {
                 error: error
             });
         }
+    },
+
+
+    async libresocupados(req, res, next) {
+
+
+ 
+        try {
+            const id_parqueo= req.body.id_parqueo;
+            const data = await Parqueo.getslots(id_parqueo);
+            return res.status(201).json(data);
+    
+        } 
+        catch (error) {
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+                message: `Error al listar los slots del parqueo`,
+                success: false,
+                error: error
+            });
+        
+    }
+    
     },
 
 

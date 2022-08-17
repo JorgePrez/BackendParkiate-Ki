@@ -1,5 +1,6 @@
 
 const VisitasApp = require('../models/visitas_app'); //const modelo mayuscula primer User
+const { allslotscontroller } = require('./parqueosControllers');
 
 
 module.exports = {
@@ -128,6 +129,59 @@ async obteniendoactualescontrolador(req, res, next) {
 }
 
 },
+
+
+
+async allcontroller(req, res, next) {
+
+
+ 
+    try {
+        const id_parqueo= req.body.id_parqueo;
+        const data = await VisitasApp.allvisitas(id_parqueo);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar las visitas del parqueo`,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
+
+
+async allcurrentcontroller(req, res, next) {
+
+
+ 
+    try {
+        const id_parqueo= req.body.id_parqueo;
+        const data = await VisitasApp.allvisitasactual(id_parqueo);
+        return res.status(201).json(data);
+
+    } 
+    catch (error) {
+        console.log(`Error: ${error}`);
+        return res.status(501).json({
+            message: `Error al listar las visitas actuales del parqueo`,
+            success: false,
+            error: error
+        });
+    
+}
+
+},
+
+
+
+
+
 
 
 

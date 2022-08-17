@@ -31,6 +31,8 @@ module.exports = (app) => {
 
     app.post('/api/parqueos/findfullpark',ParqueosController.findIdparkfirebase); //nombre_de_tabla /  nombre de metodo
 
+    app.post('/api/parqueos/findvisita',ParqueosController.findId_entrada_salida); //nombre_de_tabla /  nombre de metodo
+
 
 
     app.post('/api/parqueos/findparkamount',ParqueosController.findsamountpark); //nombre_de_tabla /  nombre de metodo
@@ -53,6 +55,8 @@ module.exports = (app) => {
 
     app.get('/api/parqueos/writeplaca_salida',ParqueosController.detectplacasalida); //nombre_de_tabla /  nombre de metodo
 
+   
+    app.post('/api/parqueos/slotstate',ParqueosController.libresocupados); //nombre_de_tabla /  nombre de metodo
 
     
 

@@ -162,6 +162,47 @@ Parqueo.findbyidFirebase = (id_parqueo) => {
 }
 
 
+Parqueo.findActualVisit = (id_entrada_salida) => {
+    const sql = `
+	SELECT 
+      parqueo.id_parqueo,
+  id_duenio,
+  nombre_empresa,
+  direccion,
+  capacidad_maxima,
+  media_hora,
+  hora,
+  dia,
+  mes,
+  lunes_apertura,
+  lunes_cierre,
+  domingo_apertura,
+  domingo_cierre,
+  detalles,
+  imagenes,
+  latitude,
+  longitude,
+  martes_apertura,
+  martes_cierre,
+  miercoles_apertura,
+  miercoles_cierre,
+  jueves_apertura,
+  jueves_cierre,
+  viernes_apertura,
+  viernes_cierre,
+  sabado_apertura,
+  sabado_cierre,
+  control_pagos,
+  id_firebase
+    from parqueo, placas_entrada_salida where parqueo.id_parqueo=placas_entrada_salida.id_parqueo
+    AND id_entrada_salida=$1
+    `;
+
+    return db.oneOrNone(sql, id_entrada_salida);
+}
+
+
+
 
 Parqueo.findPrize = (id_parqueo) => {
     const sql = `
@@ -263,7 +304,7 @@ Parqueo.findParks = (id_duenio,id_parqueo) => {
 
 //Obteniendo la ultimas placas 
 
-
+/*
 Parqueo.findParks = (id_duenio,id_parqueo) => {
     const sql = `
 	select Count(*) 
@@ -276,7 +317,7 @@ Parqueo.findParks = (id_duenio,id_parqueo) => {
 	    id_parqueo,
 	]);
 
-}
+}*/
 
 
 //Obtener placas de entrada
@@ -381,6 +422,19 @@ Parqueo.deteccion_entrada = (id_placa_entrada,numerodeplaca) =>{
 
 
 
+//RUTA PARA OBTENER SLOTS DE PARQUEO
+
+
+
+Parqueo.getslots = (id_parqueo) => {
+    const sql = `	
+select codigo,estado,img_slot,timestamp_cambio_ocupado, timestamp_cambio_vacio  from slots where id_parqueo=$1
+ORDER BY codigo
+    `;
+    return db.manyOrNone(sql, id_parqueo);
+
+
+}
 
 
 
