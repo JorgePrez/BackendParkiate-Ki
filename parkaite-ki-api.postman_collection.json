@@ -7,6 +7,34 @@
 	},
 	"item": [
 		{
+			"name": "MODIFICAR_PLACA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"yurina@gmail.com\" ,\r\n     \"password\": \"579!!Oo296\",\r\n     \"nombre\": \"Kawaguchi Yurina\",\r\n     \"telefono\": \"56124500\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/usuarios_app/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"usuarios_app",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "usuarios_app/register",
 			"request": {
 				"method": "POST",
